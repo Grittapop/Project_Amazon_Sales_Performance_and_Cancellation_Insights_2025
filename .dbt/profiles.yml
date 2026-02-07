@@ -1,0 +1,23 @@
+dbt_project:
+  target: docker   
+
+  outputs:
+    docker:
+      type: postgres
+      host: postgres_data
+      port: 5432
+      user: postgres
+      pass: postgres
+      dbname: postgres
+      schema: public
+
+    dev:
+      type: postgres
+      host: localhost
+      port: 5433
+      user: postgres
+      pass: postgres
+      dbname: postgres
+      schema: public
+
+
