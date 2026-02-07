@@ -1,0 +1,7 @@
+version: 2
+
+sources:
+  - name: postgres
+    schema: pubilc
+    tables:
+    - name: amazon_sales_data
