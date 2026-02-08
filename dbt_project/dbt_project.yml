@@ -34,9 +34,9 @@ models:
     # Config indicated by + and applies to all files under models/example/
     example:
       +materialized: view
-    raw:
-      +schema: raw
+    staging:
+      +schema: staging
       +materialized: table
-    transform:
-      +schema: transform
+    marts:
+      +schema: marts
       +materialized: table
