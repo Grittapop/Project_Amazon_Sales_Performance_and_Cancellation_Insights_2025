@@ -9,10 +9,10 @@ default_args = {
 }
 
 with DAG(
-    dag_id="dbt_pipeline",
+    dag_id="amazon_sales_dbt_build",
     default_args=default_args,
-    description="Run dbt models and tests",
-    schedule="@daily",  
+    description="Run Amazon Sales dbt build",
+    schedule="0 10 * * *",  
     start_date=datetime(2026, 2, 7),
     catchup=False,
     tags=["dbt"],
@@ -25,11 +25,11 @@ with DAG(
         """,
     )
 
-    dbt_run = BashOperator(
-        task_id="dbt_run",
+    dbt_build = BashOperator(
+        task_id="dbt_build",
         bash_command="""
-        dbt run --project-dir /opt/airflow/dbt_project
+        dbt build --project-dir /opt/airflow/dbt_project
         """,
     )
 
-    dbt_deps >> dbt_run 
+    dbt_deps >> dbt_build 
