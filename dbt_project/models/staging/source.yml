@@ -2,6 +2,16 @@ version: 2
 
 sources:
   - name: postgres
-    schema: pubilc
+    schema: public
     tables:
     - name: amazon_sales_data
+      columns:
+          - name: '"Order ID"'
+            tests:
+              - not_null
+              - unique
+
+          - name: '"Date"'
+            tests:
+              - not_null
+
