@@ -6,11 +6,7 @@
 
 SELECT
     order_id,
-    make_date(
-        2000 + extract(day from date)::int,   
-        extract(month from date)::int,        
-        extract(year from date)::int          
-    ) as date,
+    {{ reconstruct_date_weird('date') }} as date,
     product_key,
     quantity,
     total_sales,
