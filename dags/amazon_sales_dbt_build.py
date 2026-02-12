@@ -12,7 +12,7 @@ with DAG(
     dag_id="amazon_sales_dbt_build",
     default_args=default_args,
     description="Run Amazon Sales dbt build",
-    schedule="0 10 * * *",  
+    schedule='@daily',  
     start_date=datetime(2026, 2, 7),
     catchup=False,
     tags=["dbt"],
