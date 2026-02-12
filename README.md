@@ -81,7 +81,7 @@ The data does not represent any real company's actual financial or operational p
 
 ## 1️⃣ Architecture Overview
 
-![overview project](https://github.com/user-attachments/assets/5d2e3e20-b57b-421e-8d2e-24a1c018ede9)
+![overview project2](https://github.com/user-attachments/assets/4f90bd18-b3ba-4077-ad80-cc083a4aeb0d)
 
 
 # 🛠 Tools & Technologies
